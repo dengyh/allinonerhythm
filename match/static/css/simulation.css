@@ -1,0 +1,64 @@
+#content {
+	width: 80%;
+	margin: 50px auto;
+}
+
+#content div .panel .panel-heading {
+	background-color: rgb(0, 155, 58);
+	color: white;
+}
+
+#content .groupMatch {
+	width: 20%;
+	float: left;
+	margin: 2%;
+}
+
+#content .playoffsMatch {
+	clear: both;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.list-group-item {
+	cursor: pointer;
+	z-index: 0;
+	text-align: center;
+}
+
+#again {
+	width: 100px;
+	height: 100px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: rgb(0, 155, 58);
+	border-radius: 100%;
+	cursor: pointer;
+	color: white;
+	font-size: 24px;
+	padding: 15px 25px;
+	font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+	transition: all 1s;
+	-o-transition: all 1s;
+	-ms-transition: all 1s;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+}
+
+#again a {
+	color: white;
+	font-size: 24px;
+	text-decoration: none;
+	font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+}
+
+#again:hover {
+	border-radius: 0px;
+	background-color: rgba(0, 155, 58, 0.5);
+}
+
+.panel-body p {
+	font-size: 24px;
+	text-indent: 48px;
+}

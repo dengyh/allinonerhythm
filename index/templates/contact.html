@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}联系我们{% endblock %}
+
+{% block import %}
+<link rel="stylesheet" type="text/css" href="/index/static/css/contact.css" />
+{% endblock %}
+
+{% block content %}
+<div id="content">
+	<div class="panel panel-success">
+		<div class="panel-heading">联系我们</div>
+		<div class="panel-body">
+			<p><span>邮箱 </span> : dengyh7@qq.com</p>
+			<p><span>QQ </span> : 1041204020</p>
+			<p><span>微信 </span> : dengyh7</p>
+			{% if message %}
+				{% if flag %}
+				<p class="success">{{message}}</p>
+				{% else %}
+				<p class="faild">{{message}}</p>
+				{% endif %}
+			{% endif %}
+			<form method="post" action="/mail/" role="form">
+			{% csrf_token %}
+				<div class="form-group">
+					<label for="mailTitle">主题</label>
+					<input type="text" class="form-control" id="mailTitle" placeholder="主题" name="title" />
+				</div>
+				<div class="form-group">
+					<label for="mailBody">内容</label>
+					<textarea rows="10" class="form-control" id="mailBody" name="body" placeholder="记得带上你的联系方式"></textarea>
+				</div>
+				<button class="btn myBtn" type="submit">提交</button>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

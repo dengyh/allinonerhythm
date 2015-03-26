@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}首页{% endblock %}
+
+{% block import %}
+<link rel='stylesheet' type='text/css' href="/index/static/css/index.css" />
+{% endblock %}
+
+{% block content %}
+<div class="content">
+	<div id="countDown">
+		<div class="out">
+			<p id="countDay" class="count">
+			</p>
+			<p class="time">
+				Days
+			</p>
+		</div>
+		<div class="out">
+			<p id="countHour" class="count">
+			</p>
+			<p class="time">
+				Hours
+			</p>
+		</div>
+		<div class="out">
+			<p id="countMinute" class="count">
+			</p>
+			<p class="time">
+				Minutes
+			</p>
+		</div>
+		<div class="out">
+			<p id="countSecond" class="count">
+			</p>
+			<p class="time">
+				Seconds
+			</p>
+		</div>
+	</div>
+	<div id="match">
+		<a href="/match/">
+		<div id="matchIcon">
+			<img src="/index/static/images/match.png" />
+		</div>
+		<div id="matchContent">
+			<h2>赛程资讯</h2>
+			<p>包括比赛地点、比赛时间、比赛比分、比赛场地等</p>
+		</div>
+		</a>
+	</div>
+	<div id="team">
+		<a href="/team/">
+		<div id="teamIcon">
+			<img src="/index/static/images/team.png" />
+		</div>
+		<div id="teamContent">
+			<h2>球队资讯</h2>
+			<p>包括球队队服、球队战绩、球队历史、球队成员、球队教练</p>
+		</div>
+		</a>
+	</div>
+	<div id="people">
+		<a href="/players/">
+		<div id="peopleIcon">
+			<img src="/index/static/images/people.png" />
+		</div>
+		<div id="peopleContent">
+			<h2>人员资讯</h2>
+			<p>包括球员姓名、球员生日、球员头像、球员介绍、球员状况</p>
+			<p>教练姓名、教练头像</p>
+		</div>
+		</a>
+	</div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/index/static/js/index.js"></script>
+{% endblock %}

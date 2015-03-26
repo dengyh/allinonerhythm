@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0" />
+	<title>登录</title>
+	<link rel="stylesheet" type='text/css' href="/index/static/Bootstrap/bootstrap.css" />
+	<link rel="stylesheet" type='text/css' href="/myuser/static/login.css" />
+</head>
+<body>
+	<div id="index">
+		<a href="/"><img src="/myuser/static/index.png" /></a>
+	</div>
+	<form role="form" action="/user/login/" method="post">
+	{% csrf_token %}
+  		<div class="form-group">
+            <input type="mail" class="form-control" id="username" placeholder="邮箱" name="username" />
+  		</div>
+  		<div class="form-group">
+            <input type="password" class="form-control" id="password" placeholder="密码" name="password" />
+  		</div>
+  		<button type="submit" class="btn btn-default" id="submit">Submit</button>
+	</form>
+</body>
+</html

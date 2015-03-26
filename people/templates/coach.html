@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}教练{% endblock %}
+
+{% block import %}
+<link rel="stylesheet" type="text/css" href="/people/static/css/coach.css" />
+{% endblock %}
+
+{% block content %}
+<div id="content">
+{% for coach in coaches %}
+	<div class="players" id="players{{team.id}}">
+		<div class="playersHeader">
+			<div class="playersLogo">
+				<img src="/media/{{coach.team.logo}}" />
+			</div>
+			<div class="playersTeam">
+				<h2>{{coach.team.name}}教练</h2>
+			</div>
+		</div>
+		<div class="coach" name="{{coach.team.name}}" id="{{coach.team.name}}">
+			<div class="coachAvatar">
+				<img src="/media/{{coach.picture}}" />
+			</div>
+			<div class="coachInformation">
+				<p>中文名: {{coach.name}}</p>
+				<p>英文名: {{coach.EnglishName}}</p>
+				<p>年龄: {{coach.age}}岁</P>
+				<p>生日: {{coach.birth | date:"Y年Md日"}}</p>
+				<p>国籍: {{coach.country}}</p>
+			</div>
+			<div class="supportTimes">
+				<div class="supportIcon">
+					<img src="/people/static/images/support.png" class="supportCoach" alt="{{coach.id}}" />
+				</div>
+				<div class="supportCount">
+					<span id="coach{{coach.id}}">{{coach.support}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endfor %}
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/people/static/js/player.js"></script></script>
+{% endblock %}

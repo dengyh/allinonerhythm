@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0" />
+	<title>后台管理</title>
+	<link rel="stylesheet" href="static/Bootstrap/bootstrap.css" />
+	<link rel="stylesheet" href="static/css/backend.css" />
+	<script src="static/jQuery/jquery-2.0.1.min.js"></script>
+	<script src="static/Bootstrap/bootstrap.js"></script>
+</head>
+
+<body>
+	<div id="navigation">
+		<div id="logo">
+			<img src="static/images/logo.png" />
+		</div>
+		<hr />
+		<div id="nav">
+			<h4>NAVIGATION</h4>
+			<ul>
+				<li id="indexPage"><span class="glyphicon glyphicon-home"></span>&nbsp&nbsp&nbsp首页</li>
+				<li id="teamPage"><span class="glyphicon glyphicon-globe"></span>&nbsp&nbsp&nbsp球队管理</li>
+				<li id="peoplePage"><span class="glyphicon glyphicon-user"></span>&nbsp&nbsp&nbsp人物管理</li>
+				<li id="matchPage"><span class="glyphicon glyphicon-star"></span>&nbsp&nbsp&nbsp比赛管理</li>
+			</ul>
+		</div>
+		<div id="logout">
+			<a href="/user/logout/"><span class="glyphicon glyphicon-off"></span>&nbsp&nbsp&nbspLogout</a>
+		</div>
+	</div>
+	<div id="header">
+		<h1>All In One Rhythm</h1>
+	</div>
+	<div id="dashboard">
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">控制面板</h3>
+			</div>
+			<div class="panel-body">
+			</div>
+		</div>
+	</div>
+	<div id="control">
+		<div id="showTeam" class="teamButton">
+			<p>球队列表</p>
+		</div>
+		<div id="createTeam" class="teamButton">
+			<p>创建球队</p>
+		</div>
+		<div id="showPeople" class="peopleButton">
+			<p>人物列表</p>
+		</div>
+		<div id="createPeople" class="peopleButton">
+			<p>创建人物</p>
+		</div>
+		<div id="showMatch" class="matchButton">
+			<p>比赛列表</p>
+		</div>
+		<div id="createMatch" class="matchButton">
+			<p>创建比赛</p>
+		</div>
+	</div>
+	<script src="static/js/backend.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+#content {
+	width: 80%;
+	margin: 50px auto;
+}
+
+#content .panel-default .groupTitle {
+	background-color: rgb(0, 155, 58);
+	color: white;
+	font-size: 24px;
+	font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+}
+
+.matchView .matchHeader .panel-title .matchLink {
+	text-decoration: none;
+}
+
+h4, h3, h2 {
+	text-align: center;
+}
+
+.matchDetail {
+	width: 100%;
+	padding-left: 25%;
+}
+
+.teamImage {
+	float: left;
+	width: 10%;
+}
+
+.teamImage img {
+	width: 100%;
+}
+
+.matchName {
+	float: left;
+	font-size: 36px;
+	margin: 0px 10px;
+}
+
+.matchContent h4 {
+	text-align: center;
+	clear: both;
+}
+
+.zhibo {
+	font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+	width: 80%;
+	margin: 0 auto;
+	font-size: 24px;
+}
+
+.jijin {
+	font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+	width: 80%;
+	margin: 0 auto;
+	font-size: 24px;
+}
+
+.list-group a {
+	font-size: 12px;
+}
+
+.list-group p {
+	font-size: 12px;
+}
+
+.redPoint {
+	color: #ee2c2c;
+}
+
+.greenPoint {
+    color: rgb(0, 155, 58);

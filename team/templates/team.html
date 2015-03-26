@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}球队{% endblock %}
+
+{% block import %}
+<link rel="stylesheet" type="text/css" href="/team/static/css/team.css" />
+{% endblock %}
+
+{% block content %}
+<div id="navigation">
+	<ul>
+	{% for team in teams %}
+		<li><div><button class="teamList" value="team{{team.id}}">{{team.name}}</button></div></li>
+	{% endfor %}
+	</ul>
+</div>
+{% for team in teams %}
+	<div class="teamContent" id="team{{team.id}}">
+		<div class="footballImage">
+			<!-- <img src="/static/images/football.png" /> -->
+            			<img src="/media/{{team.logo}}" />
+		</div>
+		<div class="teamHeader">
+			<h1>
+				{{team.name}}
+			</h1>
+		</div>
+		<div class="support">
+			<div class="supportImage">
+				<img class="supportButton" src="/team/static/images/support.png" alt="{{team.id}}" />
+			</div>
+			<div class="supportCount">
+				<span id="support{{team.id}}">{{team.support}}</span>
+			</div>
+		</div>
+		<div class="teamIntroduction">
+			<h2>球队介绍</h2>
+			<p>{{team.introduction}}</p>
+		</div>
+		<div class="teamImage">
+			<div class="teamPicture">
+                			<img src="/media/{{team.picture}}" />
+				<p>国旗</p>
+			</div>
+			<div class="teamClothes">
+                			<img src="/media/{{team.clothes}}" />
+				<p>队服</p>
+			</div>
+		</div>
+		<div class="teamer">
+			<div class="coach">
+				<h2>主教练 :</h2>
+				<h4><a href="/coach/#{{team.name}}">{{team.coach.name}}</a></h4>
+			</div>
+			<div class="players">
+				<h2>球员名单 : </h2>
+				<table>
+				{% for player in team.players %}
+					<tr>
+						<td class="first_td"><a href="/player/{{player.id}}/">{{player.position}}</a></td>
+						<td class="second_td"><a href="/player/{{player.id}}/">{{player.name}} ({{player.EnglishName}})</a></td>
+						<td class="third_td"><a href="/player/{{player.id}}/">{{player.birth}} ({{player.age}}岁)<a/></td>
+					</tr>
+				{% endfor %}
+				</table>
+			</div>
+		</div>
+	</div>
+{% endfor %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/team/static/js/team.js"></script>
+{% endblock %}

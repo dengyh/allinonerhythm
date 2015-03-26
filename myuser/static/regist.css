@@ -1,0 +1,40 @@
+body {
+	font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+	background-image: url("/myuser/static/background.jpg");
+	background-size: 100%;
+	background-position: 0px -50px;
+}
+
+form {
+	width: 20%;
+	margin: 480px auto 0 auto;
+}
+
+#id_username, #id_password1, #submit, #id_password2 {
+	background-color: rgba(255, 255, 255, 0.2);
+	border: none;
+}
+
+#id_username, #id_password1, #submit, #id_password2:focus {
+	border: none;
+}
+
+#index {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+}
+
+#index img {
+	width: 80%;
+}
+
+#index img {
+	width: 80%;
+	box-shadow: none;
+	transition: box-shadow 2s ease-out;
+}
+
+#index img:hover {
+	box-shadow: 0px 0px 5px rgb(0, 155, 58);
+}

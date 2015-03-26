@@ -1,0 +1,107 @@
+#content {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.playerHeader {
+	width: 60%;
+	margin-top: 50px;
+}
+
+.playerHeader .playerPicture {
+	width: 20%;
+	float: left;
+}
+
+.playerHeader .playerPicture img {
+	width: 100%;
+}
+
+.playerHeader .playerName {
+	width: 30%;
+	margin-left: 5%;
+	float: left;
+	margin-top: 10px;
+}
+
+.playerHeader .playerName h2 {
+	font-size: 36px;
+	font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+}
+
+.playerHeader .playerName h4 {
+	font-size: 18px;
+	font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+}
+
+#content p {
+	clear: left;
+}
+
+.greenLine {
+	width: 60%;
+	float: left;
+	border-bottom: 8px solid rgb(0, 155, 58);
+	border-radius: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.information {
+	width: 70%;
+	float: left;
+}
+
+.information p {
+	margin-bottom: 10px;
+	font-size: 30px;
+	font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+}
+
+.avatar {
+	width: 25%;
+	float: right;
+	border: 5px solid rgb(0, 155, 58);
+	border-radius: 5px;
+	transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+}
+
+.avatar img {
+	width: 100%;
+}
+
+.avatar:hover {
+	width: 30%;
+}
+
+.supportTimes {
+	float: left;
+	width: 30%;
+	margin-top: 30px;
+}
+
+.supportTimes .supportIcon {
+	width: 40%;
+	float: left;
+}
+
+.supportTimes .supportIcon img {
+	width: 100%;
+	cursor: pointer;
+}
+
+.supportTimes .supportCount {
+	width: 50%;
+	float: left;
+	margin-top: 8px;
+	margin-left: 10px;
+}
+
+.supportTimes .supportCount span {
+	font-size: 36px;
+	color: rgb(61, 61, 61);
+}

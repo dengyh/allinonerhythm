@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0" />
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="shortcut icon" type="image/icon" href="/index/static/images/favo.ico" />
+	<link rel="stylesheet" type='text/css' href="/index/static/Bootstrap/bootstrap.css" />
+	<link rel="stylesheet" type='text/css' href="/index/static/css/base.css" />
+	<script type="text/javascript" src="/index/static/jQuery/jquery-2.0.1.min.js"></script>
+	<script type="text/javascript" src="/index/static/Bootstrap/bootstrap.js"></script>
+	{% block import %}{% endblock %}
+</head>
+
+<body>
+	<header>
+	{% block header %}
+		<div id="header">
+			<div id="headerText">
+				<h1>All In One Rhythm</h1>
+				<h3><img src="/index/static/images/football.png" />Get the latest information of The World Cup</h3>
+			</div>
+			<div id="headerPicture">
+			<img src="/index/static/images/symbol.png" />
+			</div>
+			<p></p>
+		</div>
+	{% endblock %}
+	</header>
+	<nav>
+	{% block nav %}
+		<div id="nav">
+			<div class="leftNav"><a href="/">AllInOneRhythm</a></div>
+			<div class="leftNav"><a href="/match/">赛程</a></div>
+			<div class="leftNav"><a href="/team/">球队</a></div>
+			<div class="leftNav"><a href="/players/">球员</a></div>
+			<div class="leftNav"><a href="/coach/">教练</a></div>
+			<div class="leftNav"><a href="/simulation/">模拟结果</a></div>
+			<div class="leftNav"><a href="/privacy/">Win8版</a></div>
+			<div class="leftNav"><a href="/mail/">用户反馈</a></div>
+			{% if user.is_authenticated %}
+			<div class="rightNav"><a href="/user/logout/">登出</a></div>
+			<div class="rightNav"><a href="#">{{user.username}}</a></div>
+			{% else %}
+			<div class="rightNav"><a href="/user/regist/">注册</a></div>
+			<div class="rightNav"><a href="/user/login/">登录</a></div>
+			{% endif %}
+		</div>
+	{% endblock %}
+	</nav>
+	<content>
+	{% block content %}
+	{% endblock %}
+	</content>
+	<footer>
+	{% block footer %}
+		<div id="footer">
+			<div>copyright &copy 2014 by Dengyh</div>
+		</div>
+	{% endblock %}
+	</footer>
+	<script type="text/javascript" src="/index/static/js/base.js"></script>
+	{% block script %}{% endblock %}
+	<script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ 		 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  		ga('create', 'UA-51746226-1', 'sinaapp.com');
+  		ga('send', 'pageview');
+
+	</script>
+</body>
+</html

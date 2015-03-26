@@ -1,0 +1,45 @@
+
+#content {
+	width: 60%;
+	margin: 50px auto;
+	font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+}
+
+#content .panel .panel-heading {
+	background-color: rgb(0, 155, 58);
+	color: white;
+}
+
+.panel-body h2 {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.panel-body p {
+	font-size: 16px;
+	text-indent: 32px;
+}
+
+.panel-body div {
+	width: 250px;
+	height: 50px;
+	margin-left: 32px;
+	background-color: rgb(0, 138, 0);
+}
+
+.panel-body a {
+	text-decoration: none;
+	font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+	color: white;
+}
+
+.panel-body a:visited {
+	font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+	color: white;
+}
+
+.panel-body a img {
+	margin-left: 10px;
+	margin-top: 5px;
+	margin-right: 5px;
+}

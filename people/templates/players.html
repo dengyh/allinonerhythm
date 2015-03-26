@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}球员{% endblock %}
+
+{% block import %}
+<link rel="stylesheet" type="text/css" href="/people/static/css/players.css" />
+{% endblock %}
+
+{% block content %}
+<div id="toTop">
+	<a id="linkTop" href="#content">回到楼顶</a>
+</div>
+
+<div id="content" name="content">
+<div class="input-group searchBox">
+      	<input id="searchText" type="text" class="form-control input-lg" placeholder="搜索球队请加'队'字"/>
+      	<span class="input-group-btn">
+        	<a href="#" class="btn btn-default btn-lg" id="searchUser">搜索</a>
+      	</span>
+</div>
+{% for team in teams %}
+	<div class="players" id="{{team.name}}" name="{{team.name}}">
+		<div class="playersHeader">
+			<div class="playersLogo">
+				<img src="/media/{{team.logo}}" />
+			</div>
+			<div class="playersTeam">
+				<h2>{{team.name}}</h2>
+			</div>
+		</div>
+		<div class="playersList">
+		{% for player in team.players %}
+			<div class="singlePlayer" name="{{player.name}}" id="{{player.name}}">
+				<div class="playerAvatar">
+					<a href="/player/{{player.id}}/">
+						<img src="/media/{{player.picture}}" />
+					</a>
+				</div>
+				<div class="playerInformation">
+					<a href="/player/{{player.id}}/">
+						<p>{{player.name}}</p>
+						<p>{{player.position}}</p>
+					</a>
+				</div>
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+{% endfor %}
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/people/static/js/players.js"></script></script>
+{% endblock %}

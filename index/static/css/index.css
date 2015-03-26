@@ -1,0 +1,105 @@
+.content {
+	width: 80%;
+	margin: 40px auto;
+	font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+}
+
+.content div {
+	float: left;
+	margin: 0 auto;
+	margin-left: 10%;
+	min-height: 128px;
+}
+
+.content div a div h2 {
+	font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+	font-size: 48px;
+	font-weight: bold;
+}
+
+.content div a div p {
+	font-size: 24px;
+}
+
+.content div a {
+	color: rgb(61, 61, 61);
+}
+
+#match {
+	clear: both;
+}
+
+#matchIcon {
+	float: left;
+	margin: 60px;
+}
+
+#matchContent {
+	float: right;
+	margin: 40px;
+}
+
+#teamIcon {
+	float: right;
+	margin: 60px;
+}
+
+#teamContent {
+	float: left;
+	margin: 40px;
+}
+
+#peopleIcon {
+	float: left;
+	margin: 60px;
+}
+
+#peopleContent {
+	float: right;
+	margin: 40px;
+}
+
+.content div a div img {
+	width: 80%;
+	transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+
+.content div a div img:hover {
+	width: 100%;
+	transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+}
+
+#countDown {
+	float: left;
+	margin: 0, auto;
+	width: 80%;
+}
+
+#countDown .out {
+	width: 120px;
+	height: 120px;
+	border-radius: 100%;
+	border: 10px solid #7CCD7C;
+	background-color: rgb(0, 155, 58);
+	padding-top: 12px;
+}
+
+#countDown .out p {
+	margin: 0, auto;
+	font-size: 32px;
+	text-align: center;
+	color: white;
+}
+
+#countDown .out .time {
+	font-size: 16px;
+	text-align: center;
+}

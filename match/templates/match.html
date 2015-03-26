@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}赛程{% endblock %}
+
+{% block import %}
+<link rel="stylesheet" type="text/css" href="/match/static/css/match.css" />
+{% endblock %}
+
+{% block content %}
+<div id="content">
+{% for group in groups %}
+	<div class="panel panel-default">
+		<div class="panel-heading groupTitle">
+			{{group.name}}
+		</div>
+		<div class="panel-body">
+			<div class="panel-group" id="group{{forloop.counter}}">
+			{% for match in group.list %}
+		 		<div class="panel panel-success matchView">
+		 			<div class="panel-heading matchHeader">
+		 				<h4 class="panel-title">
+		 					<a data-toggle="collapse" data-toggle="collapse" data-parent="#group{{forloop.parentloop.counter}}" href="#match{{match.id}}" class="matchLink">
+		 						{% ifequal match.state "now" %}
+		 						<span class="redPoint">●</span>
+		 						{% endifequal %}
+                                {% if match.hasMatch %}
+		 						<span class="greenPoint">●</span>
+		 						{% endif %}
+		 						{{match}} ({{match.datetime|date:"m月d日"}} {{match.datetime|time:"H:i:s"}})
+		 					</a>
+		 				</h4>
+		 			</div>
+		 			<div id="match{{match.id}}" class="panel-collapse collapse">
+		 				<div class="panel-body matchContent">
+		 					<div class="matchDetail">
+		 						<div class="teamImage">
+		 							<img src="/media/{{match.team_one.picture}}" />
+		 						</div>
+		 						<div class="matchName">
+		 							{{match.team_one}} VS {{match.team_two}}
+		 						</div>
+		 						<div class="teamImage">
+		 							<img src="/media/{{match.team_two.picture}}" />
+		 						</div>
+		 					</div>
+		 					<h4>{{match.flag}}</h4>
+		 					<h3>比赛地点: {{match.location}}</h3>
+		 					<div class="zhibo">
+		 						直播视频:
+		 						<div class="list-group">
+		 						{% for video in match.direct %}
+		 							<a class="list-group-item" target="_blank" href="{{video.url}}">{{video.title}}</a>
+		 						{% empty %}
+		 							<p class="list-group-item" href="#">暂无视频</p>
+		 						{% endfor %}
+		 						</div>
+							</div>
+							<div class="jijin">
+		 						集锦视频:
+		 						<div class="list-group">
+		 						{% for video in match.collection %}
+		 							<a class="list-group-item" target="_blank" href="{{video.url}}">{{video.title}}</a>
+		 						{% empty %}
+		 							<p class="list-group-item" href="#">暂无视频</p>
+		 						{% endfor %}
+		 						</div>
+							</div>
+		 				</div>
+		 			</div>
+		 		</div>
+		 	{% endfor %}
+		 	</div>
+		</div>
+	</div>
+{% endfor %}
+</div>
+{% endblock %}

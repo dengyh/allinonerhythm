@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block title %}模拟结果{% endblock %}
+
+{% block import %}
+<link rel="stylesheet" type="text/css" href="/match/static/css/simulation.css" />
+{% endblock %}
+
+{% block content %}
+<div id="content">
+	<div id="again"><a href="">重新模拟</a></div>
+	<div id="explanation" class="playoffsMatch">
+		<div class="panel panel-success">
+			<div class="panel-heading">模拟世界杯说明</div>
+			<div class="panel-body">
+				<p>本次模拟以实况足球、FIFA14中部分国家队的数据作为参考，胜负关系在大数据情况下基本合理，比分上的误差可能较大，还望见谅。</p>
+			</div>
+		</div>
+	</div>
+	<div id="groupA" class="groupMatch">
+		<div class="panel panel-success">
+			<div class="panel-heading">A组</div>
+			<div class="panel-body list-group">
+			{% for result in ResultA %}
+				<a class="list-group-item">{{result}}</a>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div id="groupB" class="groupMatch">
+		<div class="panel panel-success">
+			<div class="panel-heading">B组</div>
+			<div class="panel-body list-group">
+			{% for result in ResultB %}
+				<a class="list-group-item">{{result}}</a>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div id="groupC" class="groupMatch">
+		<div class="panel panel-success">
+			<div class="panel-heading">C组</div>
+			<div class="panel-body list-group">
+			{% for result in ResultC %}
+				<a class="list-group-item">{{result}}</a>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div id="groupD" class="groupMatch">
+		<div class="panel panel-success">
+			<div class="panel-heading">D组</div>
+			<div class="panel-body list-group">
+			{% for result in ResultD %}
+				<a class="list-group-item">{{result}}</a>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div id="groupE" class="groupMatch">
+		<div class="panel panel-success">
+			<div class="panel-heading">E组</div>
+			<div class="panel-body list-group">
+			{% for result in ResultE %}
+				<a class="list-group-item">{{result}}</a>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div id="groupF" class="groupMatch">
+		<div class="panel panel-success">
+			<div class="panel-heading">F组</div>
+			<div class="panel-body list-group">
+			{% for result in ResultF %}
+				<a class="list-group-item">{{result}}</a>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div id="groupG" class="groupMatch">
+		<div class="panel panel-success">
+			<div class="panel-heading">G组</div>
+			<div class="panel-body list-group">
+			{% for result in ResultG %}
+				<a class="list-group-item">{{result}}</a>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div id="groupH" class="groupMatch">
+		<div class="panel panel-success">
+			<div class="panel-heading">H组</div>
+			<div class="panel-body list-group">
+			{% for result in ResultH %}
+				<a class="list-group-item">{{result}}</a>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div id="group16" class="playoffsMatch">
+		<div class="panel panel-success">
+			<div class="panel-heading">八分之一决赛</div>
+			<div class="panel-body list-group">
+			{% for result in Result16 %}
+				<a class="list-group-item">{{result}}</a>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div id="group8" class="playoffsMatch">
+		<div class="panel panel-success">
+			<div class="panel-heading">四分之一决赛</div>
+			<div class="panel-body list-group">
+			{% for result in Result8 %}
+				<a class="list-group-item">{{result}}</a>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div id="group4" class="playoffsMatch">
+		<div class="panel panel-success">
+			<div class="panel-heading">半决赛</div>
+			<div class="panel-body list-group">
+			{% for result in Result4 %}
+				<a class="list-group-item">{{result}}</a>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div id="groupThird" class="playoffsMatch">
+		<div class="panel panel-success">
+			<div class="panel-heading">季军赛</div>
+			<div class="panel-body list-group">
+				<a class="list-group-item">{{Third}}</a>
+			</div>
+		</div>
+	</div>
+	<div id="groupFinal" class="playoffsMatch">
+		<div class="panel panel-success">
+			<div class="panel-heading">决赛</div>
+			<div class="panel-body list-group">
+				<a class="list-group-item">{{Final}}</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/match/static/js/simulation.js"></script>
+{% endblock %}

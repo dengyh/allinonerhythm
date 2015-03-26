@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}{{player.name}}{% endblock %}
+
+{% block import %}
+<link rel="stylesheet" type="text/css" href="/people/static/css/player.css" />
+{% endblock %}
+
+{% block content %}
+<div id="content">
+	<div class="playerHeader">
+		<div class="playerPicture">
+			<img src="/media/{{player.team.logo}}" />
+		</div>
+		<div class="playerName">
+			<h2>{{player.name}}</h2>
+			<h4>{{player.EnglishName}}</h4>
+		</div>
+		<div class="supportTimes">
+			<div class="supportIcon">
+				<img src="/people/static/images/support.png" class="supportPlayer" alt="{{player.id}}" />
+			</div>
+			<div class="supportCount">
+				<span id="player{{player.id}}">{{player.support}}</span>
+			</div>
+		</div>
+	</div>
+	<p></p>
+	<div class="greenLine"></div>
+	<div class="information">
+		<p>生日: {{player.birth | date:"Y年Md日"}}</p>
+		<p>位置: {{player.position}}</p>
+		<p>俱乐部: {{player.club}}</p>
+		<p>国家队出场次数: {{player.times}}次</p>
+	</div>
+	<div class="avatar">
+		<img src="/media/{{player.picture}}" />
+	</div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="/people/static/js/player.js"></script></script>
+{% endblock %}
